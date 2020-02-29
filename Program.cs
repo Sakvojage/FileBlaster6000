@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace FileBlaster6000
 {
@@ -6,7 +7,14 @@ namespace FileBlaster6000
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("FileBlaster6000");
+
+            var fileListProvider = new FileListProvider(args[0]); // Source path
+
+            Parallel.ForEach(fileListProvider.FilePathList, filePath =>
+            {
+                //
+            });
         }
     }
 }
