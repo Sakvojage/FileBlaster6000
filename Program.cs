@@ -35,9 +35,8 @@ namespace FileBlaster6000
 
             Console.WriteLine((DateTime.Now - start) + " ### Files parsed, calculating...");
 
-            //
-
-            Console.WriteLine((DateTime.Now - start) + " ### ..finished!");
+            reportProvider.GenerateReportFile(ref collectedData);
+            Console.WriteLine((DateTime.Now - start) + " ### ..finished! Press any key.");
             Console.ReadLine();
         }
     }
